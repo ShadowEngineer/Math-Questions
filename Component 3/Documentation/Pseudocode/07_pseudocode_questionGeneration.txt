@@ -1,0 +1,32 @@
+import Visualiser
+import Random
+subroutine generateQuestions(list_of_topics)
+
+	totalbias = 0
+	for topic in list_of_topics do
+		totalbias += topic.bias
+	endfor
+
+	for i = 0 to numberOfQuestions do
+		chosenTopic
+		if bias == true then
+			randomFloat = random.new()
+			offset = 0
+			for topic in list_of_topics do
+				if randomFloat > offset and randomFloat < offset + topic.bias/totalbias then
+					chosenTopic = topic
+					break
+				else
+					offset += topic.bias/totalbias
+				endif
+			endfor
+		else
+			randomIndex = random.new(0, list_of_topics.length)
+			chosenTopic = list_of_topics[randomIndex]
+		endif
+
+		JSONData = JSON.parse(chosenTopic.data)
+		JSONData = RandomGenerate(JSONData)
+		Visualiser.CreateQuestionFrame(JSONData)
+	endfor
+endsubroutine

@@ -1,0 +1,111 @@
+import Visualiser
+import DataHandler
+
+import Random
+subroutine RandomGenerate(JSONData)
+	newJSONObject = {}
+	
+	//choosing question format
+	questionFormats = JSONData.Get("QuestionFormats")
+	RandomFormatIndex = Random.nextInt(0, questionFormats.length)
+	chosenQuestionFormat = questionFormats[RandomFormatIndex]
+
+	valuesArray = []
+	correctAnswersArray = []
+	
+	//generating values
+	for valueFormat in chosenQuestionFormat.Get("Values") do
+		type = valueFormat.Get("type")
+		chosenValue
+
+		if type == "integer" then
+			chosenValue = Random.nextInt(valueFormat.Get("min"), valueFormat.Get("max"))
+		elseif type == "float" then
+			chosenValue = Random.NextFloat(valueFormat.Get("min"), valueFormat.Get("max"))
+		elseif type == "string" then
+			stringValuesArray = valueFormat.Get("value").split(",")
+			RandomIndex = random.NextInt(0, stringValuesArray.length)
+			chosenvalue = stringValuesArray[RandomIndex]
+		endif
+
+		valuesArray.add(chosenValue)
+	endfor
+
+	for answer in chosenQuestionFormat.Get("correctAnswers") do
+		if answer.substring(0, 1) == "#" then	//this means it's algebraic
+			correctAnswer = processString(answer.substring(1, -1), valuesArray)
+			correctAnswersArray.add(correctAnswer)
+		elseif answer.substring(0, 9) == "FILEPATH:" then
+			//not defined in this prototype
+		else
+			correctAnswersArray.add(answer)
+		endif
+	endfor
+	
+	newJSONObject.Set("Values", JSONArray.new(valuesArray))
+	newJSONObject.Set("Answers", JSONArray.new(correctAnswersArray))
+	//also set all the other data properties like suggested reading and correct workings
+	
+	return newJSONObject
+endsubroutine
+
+subroutine evaluateQuestions(list_of_questions)
+	totalScore = 0
+	for question in list_of_questions do
+		correct = false
+	
+		for answer in question.answers do
+			if answer == question.userAnswer then
+				correct = true
+				totalScore += 1
+				question.SetCorrect()
+				break
+			endif
+		endfor
+
+		if not correct then
+			question.SetIncorrect()
+		endif
+	endfor
+	
+	Visualiser.CreateEvaluationScreen(totalScore)
+	DataHandler.SaveScores(totalScore, list_of_questions)
+endsubroutine
+
+
+subroutine numberOfQuestionsButtonClicked()
+	numberofQuestions = btn_NumberOfQuestions.Value
+endsubroutine
+
+
+subroutine enableBiasChecked()
+	enableBias = cb_EnableBias.Value
+endsubroutine
+
+
+import QuestionGenerator
+
+subroutine generateButtonClicked()
+	listOfTopics = []
+	
+	for spec in Main.SpecificationObjects do
+		for topic in spec.RelatedTopicObjects do
+			if topic.Selected == true then
+				listOfTopics.add(topic)
+			endif
+		endfor
+	endfor
+	
+	QuestionGenerator.GenerateQuestions(listOfTopics)
+endsubroutine
+
+
+subroutine evaluteButtonClicked()
+	listOfQuestions = []
+
+	for question in Main.Questions do
+		listOfQuestions.add(question)
+	endfor
+
+	QuestionGenerator.evaluateQuestions(listOfQuestions)
+endsubroutine

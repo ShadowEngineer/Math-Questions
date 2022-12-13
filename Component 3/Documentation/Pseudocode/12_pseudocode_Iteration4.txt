@@ -1,0 +1,98 @@
+"userdata":
+{
+	"PrimaryColour": String rgb code
+	"SecondaryColour": String rgb code
+	"DisplayQuestionsAsList": boolean
+	"EnableBias:" boolean
+	“QuestionsPerRound”: integer
+}
+
+subroutine SaveUserSettings()
+	newObject = new JSONObject()
+	
+	newObject.add("PrimaryColour", "")
+	newObject.add("SecondaryColour", "")
+	newObject.add("BackgroundImageFilePath", "")
+
+	newObject.add("DisplayQuestionsAsList", mainClass.DisplayQuestionsAsList)
+	newObject.add("EnableBias", mainClass.EnableBias)
+	newObject.add("QuestionsPerRound", mainClass.NumberOfQuestionsPerRound)
+
+	JSON.write(... filepath to be determined ..., newObject)
+endsubroutine
+
+subroutine GetUserSettings()
+	data = JSON.parse(... filepath to be determined ...)
+	mainClass.DisplayQuestionsAsList = data.get("DisplayQuestionsAsList")
+	mainClass.EnableBias = data.get("EnableBias")
+	mainClass.NumberOfQuestionsPerRound = data.get("NumberOfQuestionsPerRound")
+endsubroutine
+
+"historic":
+[
+	{
+		"SpecificationName": String,
+		"PerformanceData":
+		[
+			{
+				"TopicName": String,
+				"Score": integer,
+				"MaxScore": integer,
+				"Date_D": integer,
+				"Date_M": integer,
+				"Date_Y": integer
+			}
+		]
+	}
+]
+
+subroutine SaveScores()
+	HistoricData = mainClass.HistoricPerformanceData
+
+	for specification in HistoricData do
+		MaxScores = new HashMap()
+		CorrectScores = new HashMap()
+
+		for question in mainClass.CurrentQuestions do
+			if question.Data.Get("SpecificationName") == specification.get("SpecificationName") then
+				topicName = question.Data.get("TopicName")
+				MaxScores.put(topicName, (MaxScores.get(topicName) or 0) + 1)
+			
+				if question.isCorrect() then
+					CorrectScores.put(topicName, (CorrectScores.get(topicName) or 0) + 1)
+				endif
+			endif
+		endfor
+	
+		for topicName in MaxScores do
+			PerformanceData = specification.get("PerformanceData")
+			score = CorrectScores.get(topicName)
+			maxScore = MaxScores.get(topicName)
+			newScoreObject = CreateNewScoreObject(Specification, topicName, score, maxScore)
+			PerformanceData.add(newScoreObject)
+		endfor
+
+		for topic in Specification.get("Topics") do
+			oldBias = topic.get("TopicBias")
+			maxScore = MaxScores.get(topic.get("TopicName") or 0
+			score = CorrectScores.get(topic.get"TopicName") or 0
+			newBias = maxScore - score + oldBias
+			topic.set("TopicBias", newBias)
+		endfor
+	endfor
+
+endsubroutine
+
+subroutine CreateNewScoreObject(specificationName, topicName, score, maxScore)
+	newJSONObject = new JSONObject()
+	newDateObject = new Date()
+
+	newJSONObject.add("TopicName", topicName)
+	newJSONObject.add("Score", score)
+	newJSONObject.add("MaxScore", maxScore)
+	newJSONObject.add("Date_D", newDateObject.getDay())
+	newJSONObject.add("Date_M", newDateObject.getMonth())
+	newJSONObject.add("Date_Y", newDateObject.getYear())
+	
+	return newJSONObject
+endsubroutine

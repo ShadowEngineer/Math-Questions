@@ -1,0 +1,95 @@
+subroutine DisplaySuggestedTopics()
+	topics = new HashMap()
+	for specification in specificationData do
+		for topic in specification do
+			topics.add(topic.get("TopicName"), topic.get("TopicBias"))
+		endfor
+	endfor
+	
+	PartialSort(topics, 5)	
+
+	for topic in topics do
+		mainClass.pnl_SuggestedTopics.add(topic)
+	endfor
+endsubroutine
+
+subroutine PartialSort(topics, numberOfHighest)
+	emptyList = {}
+	for i = 0, numberOfHighest do
+		max = 0
+		selected = null
+		for key, value in topics.getAll() do
+			if value >= max then
+				max = value
+				selected = key
+			endif
+		endfor
+		emptyList.add(selected)
+		topics.remove(selected)
+	endfor
+	
+	topics = emptyList
+endsubroutine
+
+subroutine ChangeColours(component, primaryColour, secondaryColour)
+	for component in component.getComponents() do
+		if isColourable(component) then
+			component.setBackground(primaryColour)
+			component.setForeground(secondaryColour)
+			component.setBorderColour(secondaryColour)
+		endif
+		ChangeColours(component, primaryColour, secondaryColour)
+	endfor
+endsubroutine
+
+subroutine isColourable(component)
+	colourableClasses = {
+		JButton,
+		JPanel,
+		JTextField,
+		JTextArea,
+		...
+	}
+
+	for colourableClass in colourableClasses do
+		if component.class == colourableClasses do
+			return true
+		endif
+	endfor
+
+	return false
+endsubroutine
+
+subroutine Visualiser.generateScatterGraph()
+	date = new Date()
+	for topicData in mainClass.selectedTopics do
+		specificationName = topicData.get("SpecificationName")
+		topicName = topicData.get("TopicName")
+		scatterGraph = new ScatterGraph(topicName)
+		
+		xValues = {}
+		yValues = {}
+		
+		for specification in mainClass.historicData do
+			if specification.get("SpecificationName") == specificationName then
+				for dataObject in specification.get("PerformanceData") do
+					if dataObject.get("TopicName") == topicName then
+						numberOfDays = ConvertToDay(date.getEpoch() - dataObject.get("Epoch"))
+						if numberOfdays <= 30 then
+							xValues.add(numberOfDays)
+							yValues.add(dataObject.get("Score") / dataObject.get("MaxScore"))
+						endif
+					endif
+				endfor
+			endif
+		endfor
+
+		for i = 0, xValues.length do
+			scatterGraph.addPoint(xValues.get(i), yValues,get(i))
+		endfor
+	endfor
+endsubroutine
+
+private subroutine Visualiser.ConvertToDay(epochDifference)
+	return epochDifference DIV (60 * 60 * 24)
+endsubroutine

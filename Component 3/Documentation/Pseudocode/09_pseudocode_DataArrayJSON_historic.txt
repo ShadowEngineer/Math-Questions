@@ -1,0 +1,13 @@
+"historic":
+[
+	{
+		"Specification": String,
+		"TopicName": String,
+		"TopicBias": integer,
+		"Score": integer,
+		"MaxScore": integer,
+		"Date_D": integer,
+		"Date_M": integer,
+		"Date_Y": integer
+	}
+]

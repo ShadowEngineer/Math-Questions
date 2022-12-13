@@ -1,0 +1,753 @@
+[
+    {
+        "Topics": [
+            {
+                "ExampleQuestions": [
+                    "A triangle with a base length of 5m and a height of 2m is made for a window frame.\nHow much glass is required to fill the window?\n\nThe answer is 1\/2 * 2 * 5 which is 5m^2."
+                ],
+                "UsefulReading": [
+                    {
+                        "link": "https:\/\/www.mathsisfun.com\/area.html",
+                        "message": "Every formula for every shape."
+                    }
+                ],
+                "TopicBias": 20,
+                "QuestionFormats": [
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 * #2"
+                        ],
+                        "QuestionWording": "A dining table is made out of 1 large piece of wood.\nThis table is #1 by #2.\n\nWhat is the surface area of the dining table?",
+                        "Values": [
+                            {
+                                "min": 1,
+                                "max": 2,
+                                "type": "float",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 2,
+                                "max": 5,
+                                "type": "float",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "Use the formula A = bh where b is the length of the base and the h is the height.",
+                                "mark": 1
+                            },
+                            {
+                                "working": "Use the given values to get the correct answer.",
+                                "mark": 1
+                            }
+                        ]
+                    },
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #2 * #1 \/ 4 + #3 * #1 \/ 4"
+                        ],
+                        "QuestionWording": "A trapezium of height #1, has a top of length #2 and a base of length #3.\nWhat is half the area of the trapezium?",
+                        "Values": [
+                            {
+                                "min": 1,
+                                "max": 5,
+                                "type": "float",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 2,
+                                "max": 10,
+                                "type": "float",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 5,
+                                "max": 13,
+                                "type": "float",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "Use the formula A = 1\/2 * (a + b) * h where a is the length of the base, b is the length of the top and the h is the height.\nIn this case, a = #3, b = #2 and h = #1.",
+                                "mark": 1
+                            },
+                            {
+                                "working": "Using the given values, 1\/2 * (#3 + #2) * #1. Remember to multiply by a half!",
+                                "mark": 2
+                            }
+                        ]
+                    },
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #2 * #1 \/ 2 + #3 * #1 \/ 2"
+                        ],
+                        "QuestionWording": "A trapezium of height #1, has a top of length #2 and a base of length #3.\nWhat is the area of the trapezium?",
+                        "Values": [
+                            {
+                                "min": 1,
+                                "max": 5,
+                                "type": "float",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 2,
+                                "max": 10,
+                                "type": "float",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 5,
+                                "max": 13,
+                                "type": "float",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "Use the formula A = 1\/2 * (a + b) * h where a is the length of the base, b is the length of the top and the h is the height.",
+                                "mark": 1
+                            },
+                            {
+                                "working": "Use the given values to get the correct answer.",
+                                "mark": 1
+                            }
+                        ]
+                    }
+                ],
+                "SpecificationName": "Edexcel Key Stage 3",
+                "TopicName": "Areas of Shapes"
+            },
+            {
+                "ExampleQuestions": [
+                    "A rectangular prism has a width of 4cm, a height of 3cm and a length of 5.5cm.\nWhat is the volume of the prism?\n\nThe formula for volume for a rectangular prism is the width * the height * the length. (1 mark)\nTherefore, the volume of this prism is 4 * 3 * 5.5 = 66 cubic centimeters (cm^3) (1 mark)",
+                    "A football of radius 22cm is pumped full of air.\nAssuming the thickness of the football is negligible (0), calculate the volume of air necessary to fill the football.\n\nThe formula for the volume of a sphere is 4\/3 * pi * r ^ 3 (1 mark)\nTherefore, the volume of air is 4\/3 * 3.14 * 22 ^ 3 = 44,579.6 cubic centimeters (cm^3) (rounded to 1 decimal place) (1 mark)"
+                ],
+                "UsefulReading": [
+                    {
+                        "link": "https:\/\/www.skillsyouneed.com\/num\/volume.html",
+                        "message": "This website goes into detail on what volumes are, how they're calculated and how they're used. If you would like to understand volumes more with harder questions, this may be beneficial."
+                    }
+                ],
+                "TopicBias": 1,
+                "QuestionFormats": [
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 * #2 ^ 3"
+                        ],
+                        "QuestionWording": "A toy box contains some soft playing cubes for an infant to play with. There are #1 of them in the box. If each one has a side length of #2cm, what is the total volume of all the cubes?",
+                        "Values": [
+                            {
+                                "min": 1,
+                                "max": 5,
+                                "type": "integer",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 5,
+                                "max": 7.5,
+                                "type": "float",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "The formula for the volume of a cube of side length l is: V = l^3",
+                                "mark": 1
+                            },
+                            {
+                                "working": "Substituting the numbers in, the volume of a single cube is V = #2^3",
+                                "mark": 1
+                            },
+                            {
+                                "working": "Using this volume V, the total volume can be obtained by multiplying V by #1, and hence getting the correct answer.",
+                                "mark": 1
+                            }
+                        ]
+                    },
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 ^ 3 * 3.14 * 4 \/ 3"
+                        ],
+                        "QuestionWording": "A volleyball game stops because the ball had a puncture and ran out of air. A technician fixed the hole, but it needs to be pumped full of air again. If the volleyball is #1cm in radius, what is the volume of air required to completely fill the ball?\nTake the value of pi to be 3.14 exactly.",
+                        "Values": [
+                            {
+                                "min": 10,
+                                "max": 25,
+                                "type": "float",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "The formula for the volume of a sphere of radius r is: V = 4\/3 * pi * r ^ 3",
+                                "mark": 1
+                            },
+                            {
+                                "working": "Substituting the radius of #1 in, the volume of a single volleyball is V = 4\/3 * 3.14 * #1 ^ 3",
+                                "mark": 1
+                            }
+                        ]
+                    }
+                ],
+                "SpecificationName": "Edexcel Key Stage 3",
+                "TopicName": "Volumes of Objects"
+            },
+            {
+                "ExampleQuestions": [
+                    "A window frame is a 3m by 1m rectangle. The edges of the window frame have to be made of steel to give it strength.\nAssuming the steel can be bent without losing some of its length, what is the length of the steel needed to reach the entire window's perimeter?\n\n The formula for the perimeter of a rectangle is 2 * the length + 2 * the width. (1 mark)\nUsing the given lengths, the perimeter is 2 * 3 + 2 * 1 = 8m (1 mark)"
+                ],
+                "UsefulReading": [
+                    {
+                        "link": "https:\/\/www.varsitytutors.com\/hotmath\/hotmath_help\/topics\/perimeter-area-volume",
+                        "message": "Every perimeter formula you can think of."
+                    },
+                    {
+                        "link": "https:\/\/www.mathsisfun.com\/geometry\/perimeter.html",
+                        "message": "Simpler and more visual explanations of perimeter formulas."
+                    }
+                ],
+                "TopicBias": 1,
+                "QuestionFormats": [
+                    {
+                        "CorrectAnswers": [
+                            "ALG: 2 * #1 + 2 * #2"
+                        ],
+                        "QuestionWording": "A farmer has his farmland fenced off to protect his cattle. The fence is in the shape of a rectangle.\nIts length is #1m and its width is #2m.\nWhat is the total length of the fence the farmer has?",
+                        "Values": [
+                            {
+                                "min": 100,
+                                "max": 400,
+                                "type": "integer",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 200,
+                                "max": 800,
+                                "type": "integer",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "The formula is P = 2l + 2w for the perimeter of a rectangle, where l and w are length and width with values #1 and #2 respectively.",
+                                "mark": 1
+                            },
+                            {
+                                "working": "The correct answer can then be calculated.",
+                                "mark": 1
+                            }
+                        ]
+                    },
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 + #2 + #3"
+                        ],
+                        "QuestionWording": "A triangle of side lengths #1cm, #2cm and #3cm is drawn onto a piece of paper.\nWhat is its perimeter?",
+                        "Values": [
+                            {
+                                "min": 1,
+                                "max": 10,
+                                "type": "integer",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 1,
+                                "max": 10,
+                                "type": "integer",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 1,
+                                "max": 10,
+                                "type": "integer",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "The formula for the perimeter of a triangle is P = a + b + c, where a, b and c are the 3 side lengths respectively.",
+                                "mark": 1
+                            },
+                            {
+                                "working": "Substituting #1, #2 and #3 into the equation, the perimeter can be calculated.",
+                                "mark": 1
+                            }
+                        ]
+                    }
+                ],
+                "SpecificationName": "Edexcel Key Stage 3",
+                "TopicName": "Perimeters of Shapes"
+            },
+            {
+                "ExampleQuestions": [
+                    "A fair coin is tossed.\nWhat is the probability it lands on a heads?\n\nSince the coin is fair, and there are only 2 outcomes, each outcome must be 0.5 in probability. Therefore, to get a heads, the probability is 0.5. (1 mark)"
+                ],
+                "UsefulReading": [
+                    {
+                        "link": "https:\/\/www.bbc.co.uk\/bitesize\/guides\/zk9dmp3\/revision\/1",
+                        "message": "BBC Bitesize is a useful online resource for learning about probability."
+                    },
+                    {
+                        "link": "https:\/\/learn.lboro.ac.uk\/archive\/olmp\/olmp_resources\/pages\/workbooks_1_50_jan2008\/Workbook35\/35_3_addn_mult_laws_prob.pdf",
+                        "message": "A more complex paper on probability, for the more interested students."
+                    }
+                ],
+                "TopicBias": 1,
+                "QuestionFormats": [
+                    {
+                        "CorrectAnswers": [
+                            "0.5"
+                        ],
+                        "QuestionWording": "A dice is thrown. What is the probability it lands on an even number?",
+                        "Values": [],
+                        "CorrectWorkings": []
+                    },
+                    {
+                        "CorrectAnswers": [
+                            "0.25"
+                        ],
+                        "QuestionWording": "If 2 dice are thrown, what is the probability of landing on 2 tails?",
+                        "Values": [],
+                        "CorrectWorkings": []
+                    },
+                    {
+                        "CorrectAnswers": [
+                            "Impossible"
+                        ],
+                        "QuestionWording": "The probability of something happening is 0. What is this called?",
+                        "Values": [],
+                        "CorrectWorkings": []
+                    },
+                    {
+                        "CorrectAnswers": [
+                            "Certain"
+                        ],
+                        "QuestionWording": "The probability of something happening is 1. What is this called?",
+                        "Values": [],
+                        "CorrectWorkings": []
+                    },
+                    {
+                        "CorrectAnswers": [
+                            "Very likely"
+                        ],
+                        "QuestionWording": "The probability of something happening is 0.9. What is this called?",
+                        "Values": [],
+                        "CorrectWorkings": []
+                    }
+                ],
+                "SpecificationName": "Edexcel Key Stage 3",
+                "TopicName": "Probability"
+            },
+            {
+                "ExampleQuestions": [
+                    "What is 7 squared?\n\nThis means 7 * 7 or 7 ^ 2.\nThe answer is 49",
+                    "What is the square root of 25?\n\nThis means sqrt(25) or 25 ^ 0.5.\nThe answer is 5."
+                ],
+                "UsefulReading": [
+                    {
+                        "link": "https:\/\/www.bbc.co.uk\/bitesize\/guides\/z66p34j\/revision\/3",
+                        "message": "BBC Bitesize explains roots and squares very simply for KS3 level maths!"
+                    },
+                    {
+                        "link": "https:\/\/www.adelaide.edu.au\/mathslearning\/system\/files\/media\/documents\/2019-09\/index-laws-revision.pdf",
+                        "message": "This website demonstrates the uses of all the index laws for those looking to read further into the topic."
+                    }
+                ],
+                "TopicBias": 1,
+                "QuestionFormats": [
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 ^ 2"
+                        ],
+                        "QuestionWording": "What is #1 squared?",
+                        "Values": [
+                            {
+                                "min": 1,
+                                "max": 10,
+                                "type": "integer",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": []
+                    },
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 ^ 0.5"
+                        ],
+                        "QuestionWording": "What is #1 square rooted?",
+                        "Values": [
+                            {
+                                "min": 1,
+                                "max": 100,
+                                "type": "integer",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": []
+                    },
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 ^ 3"
+                        ],
+                        "QuestionWording": "What is #1 cubed?",
+                        "Values": [
+                            {
+                                "min": 1,
+                                "max": 10,
+                                "type": "integer",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": []
+                    }
+                ],
+                "SpecificationName": "Edexcel Key Stage 3",
+                "TopicName": "Powers and Roots"
+            }
+        ],
+        "SpecificationName": "Edexcel Key Stage 3"
+    },
+    {
+        "Topics": [
+            {
+                "ExampleQuestions": [
+                    "What is 35 + 14?\n = 49"
+                ],
+                "UsefulReading": [],
+                "TopicBias": 1,
+                "QuestionFormats": [
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 + #2"
+                        ],
+                        "QuestionWording": "What is #1 + #2?",
+                        "Values": [
+                            {
+                                "min": 1,
+                                "max": 250,
+                                "type": "integer",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 1,
+                                "max": 250,
+                                "type": "integer",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "#1 + #2 gets the correct answer. For larger numbers, remember to carry the place value over to the next digit.",
+                                "mark": 1
+                            }
+                        ]
+                    }
+                ],
+                "SpecificationName": "ARITHMETIC PRACTICE",
+                "TopicName": "Whole Number Addition"
+            },
+            {
+                "ExampleQuestions": [
+                    "What is 76 - 31?\n = 45"
+                ],
+                "UsefulReading": [],
+                "TopicBias": 1,
+                "QuestionFormats": [
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 - #2"
+                        ],
+                        "QuestionWording": "What is #1 - #2?",
+                        "Values": [
+                            {
+                                "min": 1,
+                                "max": 250,
+                                "type": "integer",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 1,
+                                "max": 250,
+                                "type": "integer",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "#1 - #2 gets the correct answer.",
+                                "mark": 1
+                            }
+                        ]
+                    }
+                ],
+                "SpecificationName": "ARITHMETIC PRACTICE",
+                "TopicName": "Whole Number Subtraction"
+            },
+            {
+                "ExampleQuestions": [
+                    "What is 56 * 24?\n = 50 * 20 + 50 * 4 + 6 * 20 + 6 * 4\n = 1344"
+                ],
+                "UsefulReading": [],
+                "TopicBias": 1,
+                "QuestionFormats": [
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 * #2"
+                        ],
+                        "QuestionWording": "What is #1 * #2?",
+                        "Values": [
+                            {
+                                "min": 0,
+                                "max": 50,
+                                "type": "integer",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 0,
+                                "max": 50,
+                                "type": "integer",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "#1 * #2 gets the correct answer.",
+                                "mark": 1
+                            }
+                        ]
+                    }
+                ],
+                "SpecificationName": "ARITHMETIC PRACTICE",
+                "TopicName": "Whole Number Multiplication"
+            },
+            {
+                "ExampleQuestions": [
+                    "What is 45 \/ 9?\n = 5"
+                ],
+                "UsefulReading": [],
+                "TopicBias": 1,
+                "QuestionFormats": [
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 \/ #2"
+                        ],
+                        "QuestionWording": "What is #1 \/ #2?",
+                        "Values": [
+                            {
+                                "min": 0,
+                                "max": 250,
+                                "type": "integer",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 1,
+                                "max": 10,
+                                "type": "integer",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "#1 \/ #2 gets the correct answer.",
+                                "mark": 1
+                            }
+                        ]
+                    },
+                    {
+                        "CorrectAnswers": [
+                            "Undefined"
+                        ],
+                        "QuestionWording": "What is #1 \/ 0?",
+                        "Values": [
+                            {
+                                "min": 0,
+                                "max": 100,
+                                "type": "integer",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "Division by 0 is undefined.",
+                                "mark": 1
+                            }
+                        ]
+                    }
+                ],
+                "SpecificationName": "ARITHMETIC PRACTICE",
+                "TopicName": "Whole Number Division"
+            },
+            {
+                "ExampleQuestions": [
+                    "What is 35.2 + 14.9?\n = 49.9"
+                ],
+                "UsefulReading": [],
+                "TopicBias": 1,
+                "QuestionFormats": [
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 + #2"
+                        ],
+                        "QuestionWording": "What is #1 + #2?",
+                        "Values": [
+                            {
+                                "min": 1,
+                                "max": 250,
+                                "type": "float",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 1,
+                                "max": 250,
+                                "type": "float",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "#1 + #2 gets the correct answer.",
+                                "mark": 1
+                            }
+                        ]
+                    }
+                ],
+                "SpecificationName": "ARITHMETIC PRACTICE",
+                "TopicName": "Decimal Number Addition"
+            },
+            {
+                "ExampleQuestions": [
+                    "What is 76.6 - 31.8?\n = 44.8"
+                ],
+                "UsefulReading": [],
+                "TopicBias": 1,
+                "QuestionFormats": [
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 - #2"
+                        ],
+                        "QuestionWording": "What is #1 - #2?",
+                        "Values": [
+                            {
+                                "min": 1,
+                                "max": 250,
+                                "type": "float",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 1,
+                                "max": 250,
+                                "type": "float",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "#1 - #2 gets the correct answer.",
+                                "mark": 1
+                            }
+                        ]
+                    }
+                ],
+                "SpecificationName": "ARITHMETIC PRACTICE",
+                "TopicName": "Decimal Number Subtraction"
+            },
+            {
+                "ExampleQuestions": [
+                    "What is 20.5 * 7.2?\n = 147.6"
+                ],
+                "UsefulReading": [],
+                "TopicBias": 1,
+                "QuestionFormats": [
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 * #2"
+                        ],
+                        "QuestionWording": "What is #1 * #2?",
+                        "Values": [
+                            {
+                                "min": 0,
+                                "max": 50,
+                                "type": "float",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 0,
+                                "max": 50,
+                                "type": "float",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "#1 * #2 gets the correct answer.",
+                                "mark": 1
+                            }
+                        ]
+                    }
+                ],
+                "SpecificationName": "ARITHMETIC PRACTICE",
+                "TopicName": "Decimal Number Multiplication"
+            },
+            {
+                "ExampleQuestions": [
+                    "What is 45.4 \/ 9.5?\n = 4.778947368421053\n = 4.8 (rounded to 1 decimal place)"
+                ],
+                "UsefulReading": [],
+                "TopicBias": 1,
+                "QuestionFormats": [
+                    {
+                        "CorrectAnswers": [
+                            "ALG: #1 \/ #2"
+                        ],
+                        "QuestionWording": "What is #1 \/ #2?",
+                        "Values": [
+                            {
+                                "min": 0,
+                                "max": 250,
+                                "type": "float",
+                                "value": "NULL"
+                            },
+                            {
+                                "min": 1,
+                                "max": 10,
+                                "type": "float",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "#1 \/ #2 gets the correct answer.",
+                                "mark": 1
+                            }
+                        ]
+                    },
+                    {
+                        "CorrectAnswers": [
+                            "Undefined"
+                        ],
+                        "QuestionWording": "What is #1 \/ 0?",
+                        "Values": [
+                            {
+                                "min": 0,
+                                "max": 100,
+                                "type": "float",
+                                "value": "NULL"
+                            }
+                        ],
+                        "CorrectWorkings": [
+                            {
+                                "working": "Division by 0 is undefined.",
+                                "mark": 1
+                            }
+                        ]
+                    }
+                ],
+                "SpecificationName": "ARITHMETIC PRACTICE",
+                "TopicName": "Decimal Number Division"
+            }
+        ],
+        "SpecificationName": "ARITHMETIC PRACTICE"
+    }
+]

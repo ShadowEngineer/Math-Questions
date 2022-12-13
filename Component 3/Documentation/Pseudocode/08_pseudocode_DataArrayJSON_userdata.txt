@@ -1,0 +1,8 @@
+"userdata":
+{
+	"PrimaryColour": String rgba code
+	"SecondaryColour": String rgba code
+	"BackgroundImageFilePath": String
+	"DisplayQuestionsAsList": boolean
+	"EnableBias:" boolean
+}

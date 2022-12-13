@@ -1,0 +1,48 @@
+"specification":
+[
+	"specificationName": String
+	"Topics":
+	[
+		{
+			"topicName": String,
+			"topicBias": integer,
+			"ExampleQuestions":
+			[
+				"1": String 
+			]
+			"QuestionFormats":
+			[
+				{
+					"questionWording": String with "%" to be replaced with values,
+					"correctAnswers":
+					[
+						Strings (algebra to get to it, absolute, or filepath to a java class to generate correct solution(s))
+					],
+					"Values":
+					[
+						{
+							"type": String (can be "integer" or "decimal")
+							"value": String in format "value,value,value" if "type" == "String
+							"min": integer (if "type" is integer or decimal)
+							"max": integer (if "type" is integer or decimal)
+						}
+					],
+					"CorrectWorkings":
+					[
+						{
+							"working": String
+							"mark": integer
+						}
+					]
+				}
+			],
+			"UsefulReading":
+			[
+				{
+					"message": String
+					"link": String
+				}
+			]
+		}
+	]
+]

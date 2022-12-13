@@ -1,0 +1,38 @@
+procedure getInitialData()
+	specificationFile = file.open("Specifications")
+	data = specificationFile.read()
+	specificationFile.close()
+	JSONObject = (JSONObject) JSONValue.parse(data)
+	
+	specificationList = JSONObject.get("specification")
+	for i = 0, specificationList.length do
+		specPanel = Visualiser.createSpecificationComponent(
+			JspecificationList[i].get("specificationName")
+		)
+		
+		topicList = specificationList[i].get("Topics")
+		for j = 0, topicList.length do
+			Visualiser.createTopicLabel(
+				topicList[j]
+			)
+		endfor
+	endfor
+endprocedure
+
+procedure listCheckBoxClicked()
+	displayQuestionsAsList = not displayQuestionsAsList
+endprocedure
+
+procedure selectTopic(Component)
+	checkBox = Component.getComponent("CheckBox")
+	checkBox.Toggled = not checkBox.Toggled
+endprocedure
+
+procedure selectSpecification(SpecificationPanel)
+	specCheckBox = SpecificationPanel.getComponent("CheckBox")
+	specCheckBox.Toggled = not specCheckBox.Toggled
+	for component in SpecificationPanel do
+		checkBox = component.getComponent("CheckBox")
+		checkBox.Toggled = specCheckBox.Toggled
+	endfor
+endprocedure

@@ -1,0 +1,53 @@
+"topics":
+[
+	{
+		"topicName": "Areas",
+		"topicBias": 1,
+		"exampleQuestion": "Area of a rectangle with height 6m, length 2m?\nYou would multiply 2 by 6 to get 12m squared.",
+		"QuestionFormats":
+		[
+			{
+				"questionWording": "A triangle has a base of %m, and a height of%m. What is its area?",
+				"correctAnswers":
+				[
+					"0.5 * #1 * #2",
+				],
+				"Values":
+				[
+					{
+						"type": "decimal"
+						"min": 1
+						"max": 10
+					}
+					{
+						"type": "decimal"
+						"min": 5
+						"max": 20
+					}
+				],
+				"CorrectWorkings":
+				[
+					{
+						"working": "Area of a triangle is 1/2 * base * height."
+						"mark": 1
+					}
+					{
+						"working": "1/2 * #1 * #2 is "
+						"mark": 1
+					}
+				]
+			}
+		],
+		"UsefulReading":
+		[
+			{
+				"message": "If you would like to find out about the area of an n sided polygon, read this!",
+				"link": "https://www.storyofmathematics.com/area-of-polygon"
+			}
+			{
+				"message": "This useful website explains how to calculate volume!",
+				"link": "https://www.varsitytutors.com/hotmath/hotmath_help/topics/perimeter-area-volume"
+			}
+		]
+	}
+]

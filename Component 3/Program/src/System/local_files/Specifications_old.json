@@ -1,0 +1,355 @@
+[
+	{
+		"SpecificationName": "Edexcel",
+		"Topics":
+		[
+			{
+				"TopicName": "Areas of Shapes",
+				"TopicBias": 1,
+				"ExampleQuestions":
+				[
+					"A triangle with a base length of 5m and a height of 2m is made for a window frame. How much glass is required to fill the window? The answer is 1/2 * 2 * 5 which is 5m^2."
+				],
+				"QuestionFormats":
+				[
+					{
+						"QuestionWording": "A dining table is made out of 1 large piece of wood.\nThis table is #1 by #2.\n\nWhat is the surface area of the dining table?",
+						"CorrectAnswers":
+						[
+							"ALG: #1 * #2"
+						],
+						"Values":
+						[
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 1,
+								"max": 2
+							},
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 2,
+								"max": 5
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "Use the formula A = bh where b is the length of the base and the h is the height.",
+								"mark": 1
+							},
+							{
+								"working": "Use the given values to get the correct answer.",
+								"mark": 1
+							}
+						]
+					},
+					{
+						"QuestionWording": "A trapezium of height #1, has a top of length #2 and a base of length #3.\nWhat is half the area of the trapezium?",
+						"CorrectAnswers":
+						[
+							"ALG: #2 * #1 / 4 + #3 * #1 / 4"
+						],
+						"Values":
+						[
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 1,
+								"max": 5
+							},
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 2,
+								"max": 10
+							},
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 5,
+								"max": 13
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working":"Use the formula A = 1\/2 * (a + b) * h where a is the length of the base, b is the length of the top and the h is the height.\nIn this case, a = #3, b = #2 and h = #1.",
+								"mark":1
+							},
+							{
+								"working":"Using the given values, 1/2 * (#3 + #2) * #1. Remember to multiply by a half!",
+								"mark":2
+							}
+						]
+					},
+					{
+						"QuestionWording": "A trapezium of height #1, has a top of length #2 and a base of length #3.\nWhat is the area of the trapezium?",
+						"CorrectAnswers":
+						[
+							"ALG: #2 * #1 / 2 + #3 * #1 / 2"
+						],
+						"Values":
+						[
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 1,
+								"max": 5
+							},
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 2,
+								"max": 10
+							},
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 5,
+								"max": 13
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "Use the formula A = 1/2 * (a + b) * h where a is the length of the base, b is the length of the top and the h is the height.",
+								"mark": 1
+							},
+							{
+								"working": "Use the given values to get the correct answer.",
+								"mark": 1
+							}
+						]
+					}
+				],
+				"UsefulReading":
+				[
+					{
+						"message": "Every formula for every shape.",
+						"link": "https://www.mathsisfun.com/area.html"
+					}
+				]
+			},
+			{
+				"TopicName": "TEST_TOPIC_1",
+				"TopicBias": 1,
+				"ExampleQuestions":
+				[
+					"EXAMPLE_QUESTION_1",
+					"EXAMPLE_QUESTION_2"
+				],
+				"QuestionFormats":
+				[
+					{
+						"QuestionWording": "QUESTION WORDING FORMAT 1 WITH #1 AND #2 AS MISSING VARIABLES.",
+						"CorrectAnswers":
+						[
+							"ABSOLUTE_VALUE_1",
+							"ABSOLUTE_VALUE_2"
+						],
+						"Values":
+						[
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 10,
+								"max": 20
+							},
+							{
+								"type": "String",
+								"value": "VALUE1,VALUE2,VALUE3",
+								"min": 0,
+								"max": 0
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "CORRECT WORKINGS 1",
+								"mark": 1
+							},
+							{
+								"working": "CORRECT WORKINGS 2",
+								"mark": 2
+							}
+						]
+					}
+				],
+				"UsefulReading":
+				[
+					{
+						"message": "USEFUL READING 1",
+						"link": "https://usefulreading.com"
+					}
+				]
+			},
+			{
+				"TopicName": "TEST_TOPIC_2",
+				"TopicBias": 1,
+				"ExampleQuestions":
+				[
+					"EXAMPLE_QUESTION_1",
+					"EXAMPLE_QUESTION_2"
+				],
+				"QuestionFormats":
+				[
+					{
+						"QuestionWording": "QUESTION WORDING FORMAT 1 WITH #1 AND #2 AS MISSING VARIABLES.",
+						"CorrectAnswers":
+						[
+							"ABSOLUTE_VALUE_1",
+							"ABSOLUTE_VALUE_2"
+						],
+						"Values":
+						[
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 10,
+								"max": 20
+							},
+							{
+								"type": "String",
+								"value": "VALUE1,VALUE2,VALUE3",
+								"min": 0,
+								"max": 0
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "CORRECT WORKINGS 1",
+								"mark": 1
+							},
+							{
+								"working": "CORRECT WORKINGS 2",
+								"mark": 2
+							}
+						]
+					}
+				],
+				"UsefulReading":
+				[
+					{
+						"message": "USEFUL READING 1",
+						"link": "https://usefulreading.com"
+					}
+				]
+			}
+		]
+	},
+	{
+		"SpecificationName": "TEST_SPECIFICATION_2",
+		"Topics":
+		[
+			{
+				"TopicName": "TEST_TOPIC_3",
+				"TopicBias": 1,
+				"ExampleQuestions":
+				[
+					"EXAMPLE_QUESTION_1",
+					"EXAMPLE_QUESTION_2"
+				],
+				"QuestionFormats":
+				[
+					{
+						"QuestionWording": "QUESTION WORDING FORMAT 1 WITH #1 AND #2 AS MISSING VARIABLES.",
+						"CorrectAnswers":
+						[
+							"ABSOLUTE_VALUE_1",
+							"ABSOLUTE_VALUE_2"
+						],
+						"Values":
+						[
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 10,
+								"max": 20
+							},
+							{
+								"type": "String",
+								"value": "VALUE1,VALUE2,VALUE3",
+								"min": 0,
+								"max": 0
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "CORRECT WORKINGS 1",
+								"mark": 1
+							},
+							{
+								"working": "CORRECT WORKINGS 2",
+								"mark": 2
+							}
+						]
+					}
+				],
+				"UsefulReading":
+				[
+					{
+						"message": "USEFUL READING 1",
+						"link": "https://usefulreading.com"
+					}
+				]
+			},
+			{
+				"TopicName": "TEST_TOPIC_4",
+				"TopicBias": 1,
+				"ExampleQuestions":
+				[
+					"EXAMPLE_QUESTION_1",
+					"EXAMPLE_QUESTION_2"
+				],
+				"QuestionFormats":
+				[
+					{
+						"QuestionWording": "QUESTION WORDING FORMAT 1 WITH #1 AND #2 AS MISSING VARIABLES.",
+						"CorrectAnswers":
+						[
+							"ABSOLUTE_VALUE_1",
+							"ABSOLUTE_VALUE_2"
+						],
+						"Values":
+						[
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 10,
+								"max": 20
+							},
+							{
+								"type": "String",
+								"value": "VALUE1,VALUE2,VALUE3",
+								"min": 0,
+								"max": 0
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "CORRECT WORKINGS 1",
+								"mark": 1
+							},
+							{
+								"working": "CORRECT WORKINGS 2",
+								"mark": 2
+							}
+						]
+					}
+				],
+				"UsefulReading":
+				[
+					{
+						"message": "USEFUL READING 1",
+						"link": "https://usefulreading.com"
+					}
+				]
+			}
+		]
+	}
+]

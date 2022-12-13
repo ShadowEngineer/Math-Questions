@@ -1,0 +1,56 @@
+import DataHandler
+import QuestionGenerator
+import Visualiser
+
+class Main
+    procedure Main()
+	// Initialisation of the classes.
+	DataHandler dataHandler = new DataHandler()
+	QuestionGenerator questionGenerator = new questionGenerator()
+	Visualiser visualiser = new Visualiser()
+
+	// Initialisation of the UI.
+	initialData = DataHandler.getInitialData()
+	initialiseUI(initialData)  
+	
+	// Initialising the starting values.
+	questionGenerator.changeTopics()
+
+	// Event listeners will go here - for all buttons.
+	btn_Generate.Event.Clicked(QuestionGenerator.generate(selectedTopics))
+	btn_ExitTest.Event.Clicked(cancelTest())
+	btn_Solve.Event.Clicked(QuestionGenerator.evaluate())
+	btn_Hint.Event.Clicked(QuestionGenerator.provideHint())
+	btn_MoreStats.Event.Clicked(displayStatisticsPanelFull())
+	// Extra buttons will have their events here.
+    endprocedure
+
+    procedure initialiseUI(initialData)
+	window.clearAll()
+	window.new()
+	Topics = initialData[0]
+	TopicsOfImprovement = initialData[1]
+	Colours = initialData[2]
+	
+	//Creating the list of topics.
+	for i = 0 to Topics.length() do
+	    createNewTopicElement(Topics[i])
+	endfor
+	
+	// Creating the list of suggested topics.
+	statsPanelElements = window.StatisticsPanel.getElements()
+	for i = 0 to 5 do
+	    statsPanelElements[i].InnerText = TopicsOfImprovement[i]
+	endfor
+
+	// Assigning colours.
+	for element in window.getElements() do
+	    element.PrimaryColour = Colours[0]
+	    element.SecondaryColour = Colours[1]
+	endfor
+    endprocedure
+
+    procedure cancelTest()
+	initialiseUI()
+    endprocedure
+endclass

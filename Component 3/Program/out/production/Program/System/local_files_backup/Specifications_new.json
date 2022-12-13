@@ -1,0 +1,602 @@
+[
+	{
+		"SpecificationName": "Edexcel Key Stage 3",
+		"Topics":
+		[
+			{
+				"TopicName": "Areas of Shapes",
+				"TopicBias": 1,
+				"ExampleQuestions":
+				[
+					"A triangle with a base length of 5m and a height of 2m is made for a window frame. How much glass is required to fill the window? The answer is 1/2 * 2 * 5 which is 5m^2."
+				],
+				"QuestionFormats":
+				[
+					{
+						"QuestionWording": "A dining table is made out of 1 large piece of wood.\nThis table is #1 by #2.\n\nWhat is the surface area of the dining table?",
+						"CorrectAnswers":
+						[
+							"ALG: #1 * #2"
+						],
+						"Values":
+						[
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 1,
+								"max": 2
+							},
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 2,
+								"max": 5
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "Use the formula A = bh where b is the length of the base and the h is the height.",
+								"mark": 1
+							},
+							{
+								"working": "Use the given values to get the correct answer.",
+								"mark": 1
+							}
+						]
+					},
+					{
+						"QuestionWording": "A trapezium of height #1, has a top of length #2 and a base of length #3.\nWhat is half the area of the trapezium?",
+						"CorrectAnswers":
+						[
+							"ALG: #2 * #1 / 4 + #3 * #1 / 4"
+						],
+						"Values":
+						[
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 1,
+								"max": 5
+							},
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 2,
+								"max": 10
+							},
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 5,
+								"max": 13
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working":"Use the formula A = 1\/2 * (a + b) * h where a is the length of the base, b is the length of the top and the h is the height.\nIn this case, a = #3, b = #2 and h = #1.",
+								"mark":1
+							},
+							{
+								"working":"Using the given values, 1/2 * (#3 + #2) * #1. Remember to multiply by a half!",
+								"mark":2
+							}
+						]
+					},
+					{
+						"QuestionWording": "A trapezium of height #1, has a top of length #2 and a base of length #3.\nWhat is the area of the trapezium?",
+						"CorrectAnswers":
+						[
+							"ALG: #2 * #1 / 2 + #3 * #1 / 2"
+						],
+						"Values":
+						[
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 1,
+								"max": 5
+							},
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 2,
+								"max": 10
+							},
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 5,
+								"max": 13
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "Use the formula A = 1/2 * (a + b) * h where a is the length of the base, b is the length of the top and the h is the height.",
+								"mark": 1
+							},
+							{
+								"working": "Use the given values to get the correct answer.",
+								"mark": 1
+							}
+						]
+					}
+				],
+				"UsefulReading":
+				[
+					{
+						"message": "Every formula for every shape.",
+						"link": "https://www.mathsisfun.com/area.html"
+					}
+				]
+			},
+			{
+				"TopicName": "Volumes of Objects",
+				"TopicBias": 1,
+				"ExampleQuestions":
+				[
+					"A rectangular prism has a width of 4cm, a height of 3cm and a length of 5.5cm.\nWhat is the volume of the prism?\n\nThe formula for volume for a rectangular prism is the width * the height * the length. (1 mark)\nTherefore, the volume of this prism is 4 * 3 * 5.5 = 66 cubic centimeters (cm^3) (1 mark)",
+					"A football of radius 22cm is pumped full of air.\nAssuming the thickness of the football is negligible (0), calculate the volume of air necessary to fill the football.\n\nThe formula for the volume of a sphere is 4/3 * pi * r ^ 3 (1 mark)\nTherefore, the volume of air is 4/3 * 3.14 * 22 ^ 3 = 44,579.6 cubic centimeters (cm^3) (rounded to 1 decimal place) (1 mark)"
+				],
+				"QuestionFormats":
+				[
+					{
+						"QuestionWording": "A toy box contains some soft playing cubes for an infant to play with. There are #1 of them in the box. If each one has a side length of #2cm, what is the total volume of all the cubes?",
+						"CorrectAnswers":
+						[
+							"ALG: #1 * #2 ^ 3"
+						],
+						"Values":
+						[
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 1,
+								"max": 5
+							},
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 5,
+								"max": 7.5
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "The formula for the volume of a cube of side length l is: V = l^3",
+								"mark": 1
+							},
+							{
+								"working": "Substituting the numbers in, the volume of a single cube is V = #2^3",
+								"mark": 1
+							},
+							{
+								"working": "Using this volume V, the total volume can be obtained by multiplying V by #1, and hence getting the correct answer.",
+								"mark": 1
+							}
+						]
+					},
+					{
+						"QuestionWording": "A volleyball game stops because the ball had a puncture and ran out of air. A technician fixed the hole, but it needs to be pumped full of air again. If the volleyball is #1cm in radius, what is the volume of air required to completely fill the ball?\nTake the value of pi to be 3.14 exactly.",
+						"CorrectAnswers":
+						[
+							"ALG: #1 ^ 3 * 3.14 * 4 / 3"
+						],
+						"Values":
+						[
+							{
+								"type": "float",
+								"value": "NULL",
+								"min": 10,
+								"max": 25
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "The formula for the volume of a sphere of radius r is: V = 4/3 * pi * r ^ 3",
+								"mark": 1
+							},
+							{
+								"working": "Substituting the radius of #1 in, the volume of a single volleyball is V = 4/3 * 3.14 * #1 ^ 3",
+								"mark": 1
+							}
+						]
+					}
+				],
+				"UsefulReading":
+				[
+					{
+						"message": "This website goes into detail on what volumes are, how they're calculated and how they're used. If you would like to understand volumes more with harder questions, this may be beneficial.",
+						"link": "https://www.skillsyouneed.com/num/volume.html"
+					}
+				]
+			},
+			{
+				"TopicName": "Perimeters of Shapes",
+				"TopicBias": 1,
+				"ExampleQuestions":
+				[
+					"A window frame is a 3m by 1m rectangle. The edges of the window frame have to be made of steel to give it strength.\nAssuming the steel can be bent without losing some of its length, what is the length of the steel needed to reach the entire window's perimeter?\n\n The formula for the perimeter of a rectangle is 2 * the length + 2 * the width. (1 mark)\nUsing the given lengths, the perimeter is 2 * 3 + 2 * 1 = 8m (1 mark)"
+				],
+				"QuestionFormats":
+				[
+					{
+						"QuestionWording": "A farmer has his farmland fenced off to protect his cattle. The fence is in the shape of a rectangle.\nIts length is #1m and its width is #2m.\nWhat is the total length of the fence the farmer has?",
+						"CorrectAnswers":
+						[
+							"ALG: 2 * #1 + 2 * #2"
+						],
+						"Values":
+						[
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 100,
+								"max": 400
+							},
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 200,
+								"max": 800
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "The formula is P = 2l + 2w for the perimeter of a rectangle, where l and w are length and width with values #1 and #2 respectively.",
+								"mark": 1
+							},
+							{
+								"working": "The correct answer can then be calculated.",
+								"mark": 1
+							}
+						]
+					},
+					{
+						"QuestionWording": "A triangle of side lengths #1cm, #2cm and #3cm is drawn onto a piece of paper.",
+						"CorrectAnswers":
+						[
+							"ALG: #1 + #2 + #3"
+						],
+						"Values":
+						[
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 1,
+								"max": 10
+							},
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 1,
+								"max": 10
+							},
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 1,
+								"max": 10
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "The formula for the perimeter of a triangle is P = a + b + c, where a, b and c are the 3 side lengths respectively.",
+								"mark": 1
+							},
+							{
+								"working": "Substituting #1, #2 and #3 into the equation, the perimeter can be calculated.",
+								"mark": 1
+							}
+						]
+					}
+				],
+				"UsefulReading":
+				[
+					{
+						"message": "Every perimeter formula you can think of.",
+						"link": "https://www.varsitytutors.com/hotmath/hotmath_help/topics/perimeter-area-volume"
+					},
+					{
+						"message": "Simpler and more visual explanations of perimeter formulas.",
+						"link": "https://www.mathsisfun.com/geometry/perimeter.html"
+					}
+				]
+			},
+			{
+				"TopicName": "Probability",
+				"TopicBias": 1,
+				"ExampleQuestions":
+				[
+					"A fair coin is tossed.\nWhat is the probability it lands on a heads?\n\nSince the coin is fair, and there are only 2 outcomes, each outcome must be 0.5 in probability. Therefore, to get a heads, the probability is 0.5. (1 mark)"
+				],
+				"QuestionFormats":
+				[
+					{
+						"QuestionWording": "A dice is thrown. What is the probability it lands on an even number?",
+						"CorrectAnswers":
+						[
+							"0.5"
+						],
+						"Values":
+						[
+							
+						],
+						"CorrectWorkings":
+						[
+							
+						]
+					},
+					{
+						"QuestionWording": "If 2 dice are thrown, what is the probability of landing on 2 tails?",
+						"CorrectAnswers":
+						[
+							"0.25"
+						],
+						"Values":
+						[
+							
+						],
+						"CorrectWorkings":
+						[
+							
+						]
+					},
+					{
+						"QuestionWording": "The probability of something happening is 0. What is this called?",
+						"CorrectAnswers":
+						[
+							"Impossible"
+						],
+						"Values":
+						[
+							
+						],
+						"CorrectWorkings":
+						[
+							
+						]
+					},
+					{
+						"QuestionWording": "The probability of something happening is 1. What is this called?",
+						"CorrectAnswers":
+						[
+							"Certain"
+						],
+						"Values":
+						[
+							
+						],
+						"CorrectWorkings":
+						[
+							
+						]
+					},
+					{
+						"QuestionWording": "The probability of something happening is 0.9. What is this called?",
+						"CorrectAnswers":
+						[
+							"Very likely"
+						],
+						"Values":
+						[
+							
+						],
+						"CorrectWorkings":
+						[
+							
+						]
+					}
+				],
+				"UsefulReading":
+				[
+					{
+						"message": "BBC Bitesize is a useful online resource for learning about probability.",
+						"link": "https://www.bbc.co.uk/bitesize/guides/zk9dmp3/revision/1"
+					},
+					{
+						"message": "A more complex paper on probability, for the more interested students.",
+						"link": "https://learn.lboro.ac.uk/archive/olmp/olmp_resources/pages/workbooks_1_50_jan2008/Workbook35/35_3_addn_mult_laws_prob.pdf"
+					}
+				]
+			},
+			{
+				"TopicName": "Powers and Roots",
+				"TopicBias": 1,
+				"ExampleQuestions":
+				[
+					"What is 7 squared?\n\nThis means 7 * 7 or 7 ^ 2.\nThe answer is 49",
+					"What is the square root of 25?\n\nThis means sqrt(25) or 25 ^ 0.5.\nThe answer is 5."
+				],
+				"QuestionFormats":
+				[
+					{
+						"QuestionWording": "What is #1 squared?",
+						"CorrectAnswers":
+						[
+							"ALG: #1 ^ 2"
+						],
+						"Values":
+						[
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 1,
+								"max": 10
+							},
+						],
+						"CorrectWorkings":
+						[
+							
+						]
+					},
+					{
+						"QuestionWording": "What is #1 square rooted?",
+						"CorrectAnswers":
+						[
+							"ALG: #1 ^ 0.5"
+						],
+						"Values":
+						[
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 1,
+								"max": 100
+							},
+						],
+						"CorrectWorkings":
+						[
+							
+						]
+					},
+					{
+						"QuestionWording": "What is #1 cubed?",
+						"CorrectAnswers":
+						[
+							"ALG: #1 ^ 3"
+						],
+						"Values":
+						[
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 1,
+								"max": 10
+							},
+						],
+						"CorrectWorkings":
+						[
+							
+						]
+					}
+				],
+				"UsefulReading":
+				[
+					{
+						"message": "BBC Bitesize is a useful online resource for learning about probability.",
+						"link": "https://www.bbc.co.uk/bitesize/guides/zk9dmp3/revision/1"
+					}
+				]
+			}
+		]
+	},
+	{
+		"SpecificationName": "TEST_SPECIFICATION_2",
+		"Topics":
+		[
+			{
+				"TopicName": "TEST_TOPIC_3",
+				"TopicBias": 1,
+				"ExampleQuestions":
+				[
+					"EXAMPLE_QUESTION_1",
+					"EXAMPLE_QUESTION_2"
+				],
+				"QuestionFormats":
+				[
+					{
+						"QuestionWording": "QUESTION WORDING FORMAT 1 WITH #1 AND #2 AS MISSING VARIABLES.",
+						"CorrectAnswers":
+						[
+							"ABSOLUTE_VALUE_1",
+							"ABSOLUTE_VALUE_2"
+						],
+						"Values":
+						[
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 10,
+								"max": 20
+							},
+							{
+								"type": "String",
+								"value": "VALUE1,VALUE2,VALUE3",
+								"min": 0,
+								"max": 0
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "CORRECT WORKINGS 1",
+								"mark": 1
+							},
+							{
+								"working": "CORRECT WORKINGS 2",
+								"mark": 2
+							}
+						]
+					}
+				],
+				"UsefulReading":
+				[
+					{
+						"message": "USEFUL READING 1",
+						"link": "https://usefulreading.com"
+					}
+				]
+			},
+			{
+				"TopicName": "TEST_TOPIC_4",
+				"TopicBias": 1,
+				"ExampleQuestions":
+				[
+					"EXAMPLE_QUESTION_1",
+					"EXAMPLE_QUESTION_2"
+				],
+				"QuestionFormats":
+				[
+					{
+						"QuestionWording": "QUESTION WORDING FORMAT 1 WITH #1 AND #2 AS MISSING VARIABLES.",
+						"CorrectAnswers":
+						[
+							"ABSOLUTE_VALUE_1",
+							"ABSOLUTE_VALUE_2"
+						],
+						"Values":
+						[
+							{
+								"type": "integer",
+								"value": "NULL",
+								"min": 10,
+								"max": 20
+							},
+							{
+								"type": "String",
+								"value": "VALUE1,VALUE2,VALUE3",
+								"min": 0,
+								"max": 0
+							}
+						],
+						"CorrectWorkings":
+						[
+							{
+								"working": "CORRECT WORKINGS 1",
+								"mark": 1
+							},
+							{
+								"working": "CORRECT WORKINGS 2",
+								"mark": 2
+							}
+						]
+					}
+				],
+				"UsefulReading":
+				[
+					{
+						"message": "USEFUL READING 1",
+						"link": "https://usefulreading.com"
+					}
+				]
+			}
+		]
+	}
+]

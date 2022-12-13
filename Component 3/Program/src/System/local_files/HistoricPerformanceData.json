@@ -1,0 +1,72 @@
+[
+	{
+		"PerformanceData":[
+			{
+				"Score":1,
+				"MaxScore":1,
+				"Epoch":1641826719,
+				"TopicName":"Probability"
+			},
+			{
+				"Score":1,
+				"MaxScore":1,
+				"Epoch":1641826719,
+				"TopicName":"Areas of Shapes"
+			},
+			{
+				"Score":2,
+				"MaxScore":10,
+				"Epoch":1642763446,
+				"TopicName":"Areas of Shapes"
+			},
+			{
+				"Score":0,
+				"MaxScore":10,
+				"Epoch":1642763914,
+				"TopicName":"Areas of Shapes"
+			}
+		],
+		"SpecificationName":"Edexcel Key Stage 3"
+	},
+	{
+		"PerformanceData":[
+			{
+				"Score":2,
+				"MaxScore":2,
+				"Epoch":1641826719,
+				"TopicName":"Decimal Number Division"
+			},
+			{
+				"Score":1,
+				"MaxScore":1,
+				"Epoch":1641826719,
+				"TopicName":"Decimal Number Multiplication"
+			},
+			{
+				"Score":1,
+				"MaxScore":1,
+				"Epoch":1641826719,
+				"TopicName":"Whole Number Division"
+			},
+			{
+				"Score":2,
+				"MaxScore":2,
+				"Epoch":1641826719,
+				"TopicName":"Decimal Number Addition"
+			},
+			{
+				"Score":1,
+				"MaxScore":1,
+				"Epoch":1641826719,
+				"TopicName":"Whole Number Subtraction"
+			},
+			{
+				"Score":1,
+				"MaxScore":1,
+				"Epoch":1641826719,
+				"TopicName":"Decimal Number Subtraction"
+			}
+		],
+		"SpecificationName":"ARITHMETIC PRACTICE"
+	}
+]

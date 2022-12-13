@@ -1,0 +1,12 @@
+procedure insertionSort(integerArray)
+    sortedArray = {}
+    sortedArray[0] = integerArray[0]
+
+    for i = 1, integerArray.length do
+	for j = sortedArray.length, 0 do
+	    if integerArray.get(i) > sortedArray.get(j) then
+		sortedArray.add(integerArray.get(i))
+	    endif
+	endfor
+    endfor
+endprocedure

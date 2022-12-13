@@ -1,0 +1,100 @@
+@startuml
+
+title UML Diagram for Object Oriented Solution Architecture
+skinparam class {
+    BackgroundColor #ffffff
+    ArrowColor #000000
+    BorderColor #000000
+    FontColor #000000
+    AttributeFontColor #000000
+}
+
+skinparam package {
+    BackgroundColor #ffffff
+    ArrowColor #000000
+    BorderColor #000000
+    FontColor #000000
+}
+
+package System {
+    class Main {
+        ..Solution Globals as Fields..
+        + JSONObject UserData
+        + JSONObject SpecificationData
+        + JSONObject HistoricData
+        + Array<String> Selected Topics
+        + boolean DisplayQuestionsAsList
+        + boolean EnableBias
+        + int QuestionsPerRound
+        __
+        + void Main()
+        + void initialiseUI()
+    }
+    
+    class DataHandler {
+        + list<JSONOBject> getInitialData()
+        + List getQuestionData()
+    }
+    
+    class QuestionHandler {
+        + void generateQuestions()
+        + void validateAnswers()
+    }
+    
+    class Visualiser {
+        + void visualiseQuestion()
+        + void displayResults()
+    }
+    
+    class CustomInterfaceObject {
+    
+    }
+    
+    CustomInterfaceObject --|> QuestionBox
+    CustomInterfaceObject --|> GraphicalDisplayWindow
+    
+    class SpecificationPanel {
+        + boolean Selected
+        + JSONObject SpecificationData
+        __
+        + boolean Toggle()
+    }
+    
+    class TopicPanel {
+        + boolean Selected
+        + JSONObject TopicData
+        __
+        + boolean Toggle()
+    }
+    
+    class QuestionBox {
+        + List correctAnswers
+    }
+    
+    class ListedQuestionBox {}
+    class SingularQuestionBox {}
+    
+    QuestionBox --|> ListedQuestionBox
+    QuestionBox --|> SingularQuestionBox
+    
+    CustomInterfaceObject --|> SpecificationPanel
+    CustomInterfaceObject --|> TopicPanel
+    
+    class GraphicalDisplayWindow {
+        - String Title
+        - Array XData
+        - Array YData
+        - String XLabel
+        - String YLabel
+    }
+    
+    class ScatterGraph {}
+    class BarChart {}
+    class LineChart {}
+    
+    GraphicalDisplayWindow --|> ScatterGraph
+    GraphicalDisplayWindow --|> BarChart
+    GraphicalDisplayWindow --|> LineChart
+}
+
+@enduml

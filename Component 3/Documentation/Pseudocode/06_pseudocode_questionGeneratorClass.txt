@@ -1,0 +1,72 @@
+class QuestionGenerator
+    private selectedTopics = []
+    private bias = true
+
+    public procedure changeTopics()
+	listOfTopics = []
+	
+	// Iterating every ui list object.
+	for child in topicPanel.getElements() do
+	    if child.selected == true then
+		listOfTopics.add(child)
+	    endif
+	endfor
+
+	// Reassigning the list of topics.
+	self.selectedTopics = listOfTopics
+    endprocedure
+
+    public procedure generate(dataArray)
+	maxNumberOfQs = 10
+	questions = {}
+	totalTopicBias = 0
+	
+	if self.bias == true then
+	    // Getting total bias.
+	    for i = 0 to dataArray.size do
+		for j = 0 to dataArray[i].size do
+		    totalTopicBias = totalTopicBias + dataArray[i][1]
+		endfor
+	    endfor
+	
+	    // Creating question formats.
+	    while questions.size < maxNumberOfQs do
+		for i = 0 to dataArray.size do
+		    topicName = dataArray[i][0]
+		    topicBias = dataArray[i][1]
+		    questionFormats = dataArray[i][2]	
+		    randomNumber = random.new() // between 0 and 1
+
+		    if randomNumber <= (topicBias / totalTopicBias) then
+			randomIndex = math.round(random.new() * questionFormats.size)
+			questions.add(questionFormats[randomIndex])
+		    else
+			break
+		    endif
+		endfor
+	    endwhile
+	else
+	    while questions.size < maxNumberOfQs do
+		for i = 0 to dataArray.size do
+		    topicName = dataArray[i][0]
+		    questionFormats = dataArray[i][2]
+		    randomNumber = random.new() // between 0 and 1
+
+		    if randomNumber <= 1 / DataArray.size then
+			randomIndex = math.round(random.new() * questionFormats.size)
+			questions.add(questionFormats[randomIndex])
+		    else
+			break
+		    endif
+		endfor
+	    endwhile
+	endif
+
+	// CHOOSE QUESTIONS HERE WITH RELATION TO DATA ARRAY
+    endfunction
+
+    public procedure evaluate()
+
+    endprocedure
+
+endclass
